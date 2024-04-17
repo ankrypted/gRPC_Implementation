@@ -1,0 +1,14 @@
+version: '3'
+services:
+  grpcserver-product:
+    image: ankeshkprasad/grpc_in_action:v1.0.0-SNAPSHOT-4
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    environment:
+      APP_PORT: "8080"
+      GRPC_PORT: "9090"
+
+networks:
+  grpc-product-net:
+    driver: bridge

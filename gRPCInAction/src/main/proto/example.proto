@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.example.grpc;
+
+service articleService {
+  rpc articleMethod (articleRequest) returns (articleResponse);
+}
+
+message articleRequest {
+  string message = 1;
+}
+
+message articleResponse {
+  string reply = 1;
+}
